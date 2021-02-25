@@ -13,3 +13,6 @@ Modulos para la carpeta server:
  * npm i cors
  * npm i nodemon -D
  * npm i @types/express -D
+ * npm i @types/morgan -D
+ * npm i @types/cors -D
+ * npm i -g typescript
