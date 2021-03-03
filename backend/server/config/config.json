@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "user": "admin",
+    "database": "arcano",
+    "password": "123456"
+}
