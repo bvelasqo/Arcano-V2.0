@@ -1,0 +1,44 @@
+<form [formGroup]="myForm"  class="text-center p-5"  (ngSubmit)="signUp()" >
+    <div class="container">
+        <p> 
+            <img src="assets/room.png" width="65" height="65" class="d-inline-block align-top" alt="logo"> 
+        </p>
+        <h1>Registrate</h1>
+    </div>
+    <input type="name" id="defaultLoginFormName" class="form-control mb-2" placeholder="Nombre Completo" name="name" formControlName="nombre">
+    <input type="name" id="defaultLoginFormNameUser" class="form-control mb-2" placeholder="Nombre Usuario" name="user" formControlName="usuario">
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-2" placeholder="E-mail" name="correo" formControlName="correo">
+    <input type="number" id="defaultLoginFormEmail" class="form-control mb-2" placeholder="Documento de identidad" name="documento" formControlName="documento">
+    <div class="d-flex justify-content-around " style="margin-top: 2px; margin-bottom: 5px">
+        <div>
+            <select class="form-control mb-12" formControlName="genero" name="genero">
+                <option value="" disabled selected>Selecciona tu género</option>
+                <option value=""></option>
+
+
+            </select>
+        </div>
+
+        <div>
+            <select type="text" class="form-control mb-12" formControlName="pais" name="pais">
+                <option value="" disabled selected>Selecciona tu País</option>
+                <option value=""></option>
+            </select>
+        </div>
+        <input id="datepickerfrom" name="fecha_nacimiento" width="250" formControlName="fecha_nacimiento" type="date" required />
+
+        <script>
+            $('#datepickerfrom').datepicker({
+                uiLibrary: 'bootstrap4',
+                format: 'yyyy-mm-dd',
+                locale: 'es-es'
+            });
+        </script>
+    </div>  
+
+    <input type="password" id="defaultLoginFormPassword" class="form-control mb-2" placeholder="Contraseña" name="pass1" formControlName="pass1">
+    <input type="password" id="defaultLoginFormPasswordc" class="form-control mb-2" placeholder="Confirmar Contraseña" name="pass2" formControlName="pass2">
+    <p style="color: white">Todos los campos son obligatorios</p>
+    <h1 *ngIf="errors">CONTRASEÑAS INVALIDAS 🚨</h1>
+    <button  type="submit" class="btn btn-info btn-block my-4" name="btnIngresar">Ingresar</button>
+</form>

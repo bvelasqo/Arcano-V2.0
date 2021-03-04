@@ -1,0 +1,21 @@
+.h1s {
+    color: aliceblue;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.ps {
+    color: white;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.instcss {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    margin-top:-120px
+}
+

@@ -1,0 +1,22 @@
+.h1qs {
+    color: aliceblue;
+    padding-top: 30px;
+}
+
+.pqs {
+    color: white;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.hola {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: black 2px inset;
+    padding: 3px 15px;
+    border: PowderBlue 5px double;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(253, 249, 249, 0.1);
+}
