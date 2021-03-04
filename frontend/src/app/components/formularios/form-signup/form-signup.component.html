@@ -1,4 +1,4 @@
-<form [formGroup]="myForm"  class="text-center p-5"  (ngSubmit)="signUp()" >
+<form [formGroup]="myForm"  class="text-center p-5"  >
     <div class="container">
         <p> 
             <img src="assets/room.png" width="65" height="65" class="d-inline-block align-top" alt="logo"> 
@@ -13,7 +13,7 @@
         <div>
             <select class="form-control mb-12" formControlName="genero" name="genero">
                 <option value="" disabled selected>Selecciona tu género</option>
-                <option value=""></option>
+                <option value="1">1</option>
 
 
             </select>
@@ -22,7 +22,7 @@
         <div>
             <select type="text" class="form-control mb-12" formControlName="pais" name="pais">
                 <option value="" disabled selected>Selecciona tu País</option>
-                <option value=""></option>
+                <option value="CO">CO</option>
             </select>
         </div>
         <input id="datepickerfrom" name="fecha_nacimiento" width="250" formControlName="fecha_nacimiento" type="date" required />
@@ -37,8 +37,8 @@
     </div>  
 
     <input type="password" id="defaultLoginFormPassword" class="form-control mb-2" placeholder="Contraseña" name="pass1" formControlName="pass1">
-    <input type="password" id="defaultLoginFormPasswordc" class="form-control mb-2" placeholder="Confirmar Contraseña" name="pass2" formControlName="pass2">
+    <input type="password" id="defaultLoginFormPasswordc" class="form-control mb-2" placeholder="Confirmar Contraseña" name="contrasena" formControlName="contrasena">
     <p style="color: white">Todos los campos son obligatorios</p>
     <h1 *ngIf="errors">CONTRASEÑAS INVALIDAS 🚨</h1>
-    <button  type="submit" class="btn btn-info btn-block my-4" name="btnIngresar">Ingresar</button>
+    <button (click)="signUp()" data-dismiss="modal" type="submit" class="btn btn-info btn-block my-4" name="btnIngresar">Ingresar</button>
 </form>

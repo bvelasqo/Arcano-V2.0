@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+
 
 @Component({
   selector: 'app-form-signup',
@@ -9,7 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class FormSignupComponent implements OnInit {
   errors:boolean;
 
-  constructor() { this.errors= false;}
+  constructor(private authServices: AuthService) { this.errors= false;}
 
   myForm:FormGroup;  
   ngOnInit(){
@@ -22,13 +24,13 @@ export class FormSignupComponent implements OnInit {
              pais: new FormControl("",[Validators.required]),
              fecha_nacimiento: new FormControl("",[Validators.required]),
              pass1: new FormControl("",[Validators.required]),
-             pass2: new FormControl("",[Validators.required]),
-
+             contrasena: new FormControl("",[Validators.required]),
         })
   }
   signUp(): void{
     console.log(this.myForm.value);
-    if(this.myForm.value.pass1===this.myForm.value.pass2){
+    this.authServices.signUp(this.myForm.value).subscribe((msg) => console.log(msg));
+    if(this.myForm.value.pass1!==this.myForm.value.pass2){
       this.errors=true;
     }
   }

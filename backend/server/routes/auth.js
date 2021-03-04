@@ -23,8 +23,8 @@ router.post(
         body('contrasena').trim().isLength({ min: 7 }),
         body('correo').isEmail().normalizeEmail(),
         body('fecha_nacimiento').trim().notEmpty(),
-        body('id_genero').trim().notEmpty(),
-        body('id_pais').trim().notEmpty()
+        body('genero').trim().notEmpty(),
+        body('pais').trim().notEmpty()
     ], authController.signup
 )
 router.post('/login', authController.login);

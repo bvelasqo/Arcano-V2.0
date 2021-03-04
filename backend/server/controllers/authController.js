@@ -17,8 +17,8 @@ exports.signup = async(req, res, next) => {
     const contrasena = req.body.contrasena;
     const correo = req.body.correo;
     const fecha_nacimiento = req.body.fecha_nacimiento;
-    const id_genero = req.body.id_genero;
-    const id_pais = req.body.id_pais;
+    const genero = 1;
+    const pais = 'CO';
     // generar codigo personal
      rand_code = (chars, lon) => {
         let code = "";
@@ -50,14 +50,24 @@ exports.signup = async(req, res, next) => {
             contrasena: hashedPassword,
             correo: correo,
             fecha_nacimiento: fecha_nacimiento,
-            id_genero: id_genero,
+            genero: genero,
             codigoPersonal: codigoPersonal,
-            id_pais: id_pais
+            pais: pais
             };
         
         const result = await Usuario.save(userDetails);
+        const user = await Usuario.findByUser(usuario);
+        const storedUser = user[0][0];
+
+        const token = jwt.sign({
+                usuario: storedUser.usuario,
+                userId: storedUser.id_usuario,
+            },
+            'secretfortoken', { expiresIn: '23h' }
+        );
+
         if (result) {
-            res.status(201).json({ message: 'User registered!' });
+            res.status(201).json({ token: token, userId: storedUser.id_usuario });
 
         } else {
             res.status(401).json({ message: 'Not registered!' });
