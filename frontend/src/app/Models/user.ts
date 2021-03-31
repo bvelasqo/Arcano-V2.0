@@ -1,13 +1,11 @@
 
 export interface User{
+    token: string,
     id: number,
     documento: string,
     nombre: string,
     usuario : string,
     contrasena : string,
     correo  : string,
-    fecha_nacimiento : string,
-    genero  : number,
-    codigoPersonal  : string,
-    pais  : number
+    genero  : number
 }

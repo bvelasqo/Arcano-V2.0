@@ -1,0 +1,25 @@
+<div class="col-md-12 row" style="display: flex; justify-content: center;">
+
+  <form [formGroup]="myForm" id="contact-form" role="form">
+    <div class="controls " style="justify-content: center; text-align: center; max-width: 800px;">
+      <div class="row" style="display: flex; justify-content: center;">
+        <div class="form-group">
+          <label for="Descripcion">Descripcion de tu reto personalizado</label>
+          <textarea class="form-control" id="Descripcion" cols="60" rows="8" name="descripcion"></textarea>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group"> <label for="form_pregunta">Sala</label>
+            <select class="form-control" name="sala" id="sala" formControlName="sala">
+              <option value="" disabled selected>Selecciona la sala</option>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12" style="display: flex; justify-content: center;">
+          <input type="submit" (click)="guardar()" style="background-color: blueviolet; color: cornsilk;"
+            class="ml-4 btn btn-send pt-2 btn-block " value="crear reto">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

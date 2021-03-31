@@ -5,54 +5,78 @@
 .h1home {
     color: rgba(255, 255, 255, 0.9);
     font-size: 48px;
+    padding: 5px;
 }
-.btns{
+
+.btns {
     margin-bottom: 50px;
 }
-.phome:hover{
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 29px;
 
+.phome:hover {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 22px;
 }
+
 .phome {
     color: rgba(255, 255, 255, 0.5);
     margin-top: 10px;
     margin-bottom: 50px;
-    font-size: 28px;
-
+    font-size: 20px;
 }
 
 .btnhome {
     border-radius: 6px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.imgHome{
+.imgHome {
     margin-top: 30px;
-
     margin-left: 10em;
     width: 40%;
     height: 90%;
 }
 
-.modal-content{
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(0, 0, 0, 0.5);
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-color: rgba(0, 0, 0, 0.9);
+    color: blanchedalmond;
 }
-.modal-header{
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.5);
 
-}
-.modal-body{
-    border-color: blue;
-
+.modal-header {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: cornflowerblue;
 }
 
 @media (max-width: 1000px) {
-    
-    .imgHome{
+    .imgHome {
         display: none;
         visibility: hidden;
-        }
+    }
+}
+
+.h1qs {
+    color: aliceblue;
+    padding-top: 30px;
+}
+
+.pqs {
+    color: white;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.hola {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: black 2px inset;
+    padding: 3px 15px;
+    border: PowderBlue 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }

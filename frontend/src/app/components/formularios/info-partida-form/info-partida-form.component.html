@@ -1,0 +1,41 @@
+<div class="container" style="margin-top: -80px; padding-bottom: 50px;">
+    <div class=" text-center mt-5 ">
+        <h1>Información general de la partida</h1>
+    </div>
+    <div class="row ">
+        <div class="col-lg-12 mx-auto">
+            <div class="card mt-2 mx-auto p-3" style="background-color: rgba(0, 0, 0, 0.459);">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.459);">
+                    <div class="container">
+                        <form [formGroup]="myForm" id="contact-form" role="form">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_name">Nombre de la partida</label> <input id="nombre" type="text" name="nombre" class="form-control" formControlName="nombre" placeholder="Por favor ingresa el nombre de la partida"
+                                                required="required" data-error="El nombre de partida es requerido"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group"> <label for="form_lastname">Temática</label> <input id="tematica" type="text" name="tematica" formControlName="tematica" class="form-control" placeholder="Por favor ingresa la temática de la partida" required="required"
+                                                data-error="La temática es requerida"> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group"> <label for="form_message">Descripcion</label> <textarea id="descripcion" name="descripcion" class="form-control" placeholder="Por favor ingresa la descripción de la partida" rows="4" required="required" formControlName="descripcion"
+                                                data-error="Por favor, ingresa una descripción"></textarea> </div>
+                                    </div>
+                                    <div class="col-md-12"> <input type="submit" (click)="continuar()" style="background-color: blueviolet; color: cornsilk;" class="btn btn-send pt-2 btn-block " value="Guardar y continuar"> </div>
+                                    <div class="col-sm mt-3">
+                                        <button class="btn btn-block pt-2" style="color: cornsilk; background-color: rgba(0, 225, 255, 0.233);" (click)="volver()">Volver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.8 -->
+        </div>
+        <!-- /.row-->
+    </div>
+</div>

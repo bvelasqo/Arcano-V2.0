@@ -1,15 +1,15 @@
-<form [formGroup]="myForm" class="text-center p-5" >
+<form [formGroup]="myForm" class="text-center p-5">
     <div class="container">
-        <p> 
-            <img src="assets/room.png" width="65" height="65" class="d-inline-block align-top" alt="logo"> 
+        <p>
+            <img src="assets/room.png" width="65" height="65" class="d-inline-block align-top" alt="logo">
         </p>
         <h1>Inicio de sesión</h1>
     </div>
     <!-- Email -->
-    <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Usuario" name="usuario" formControlName="usuario">
+    <input type="text" id="defaultLoginFormEmail" class="form-control mb-4 mt-4" placeholder="Usuario" name="usuario" formControlName="usuario">
     <!-- Password -->
     <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Contraseña" name="contrasena" formControlName="contrasena">
     <div class="modal-footer">
-        <button (click)="login()" data-dismiss="modal" [disabled]="!myForm.valid" type="submit" class="btn btn-info btn-block my-4" name="btnIngresar">Ingresar</button>
-    </div>                        
+        <button (click)="login()" data-dismiss="modal" [disabled]="!myForm.valid" type="submit" class="btn btnModal btn-block my-4" name="btnIngresar" style="color: cornsilk;">Ingresar</button>
+    </div>
 </form>

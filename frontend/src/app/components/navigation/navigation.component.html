@@ -1,20 +1,43 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" routerLink="/" routerLinkActive="active">
+<nav *ngIf="!isAuthenticated" class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand">
         <img src="assets/room.png" width="35" height="35" class="d-inline-block align-top" alt="logo"> Arcano
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <div class="navbar-nav mr-auto text-center">
             <a class="nav-link" routerLink="/home" routerLinkActive="active">Inicio</a>
             <a class="nav-link" routerLink="/nosotros" routerLinkActive="active">¿Qué es scape room?</a>
-            <a class="nav-link"  routerLink="/instrucciones" routerLinkActive="active">Instrucciones</a>
+            <a class="nav-link" routerLink="/instrucciones" routerLinkActive="active">Instrucciones</a>
         </div>
         <div class="d-flex flex-row justify-content-center">
-            <a href="https://www.facebook.com/brandonvelasquez22/" class="mr-2"><img src="assets/face.png" width="45" height="45" alt="face"></a>
-            <a href="https://www.instagram.com/tbtazo_/" class="mr-2"><img src=" assets/insta.png " width="45 " height="45 " alt="insta "></a>
-            <a href="https://twitter.com/braveos_ "><img src="assets/twi.png " width="45 " height="45 " alt="twi "></a>
+            <a target="_blank" href="https://www.facebook.com/brandonvelasquez22/" class="mr-2"><img src="assets/face.png" width="45" height="45" alt="face"></a>
+            <a target="_blank" href="https://www.instagram.com/tbtazo_/" class="mr-2"><img src=" assets/insta.png " width="45 " height="45 " alt="insta "></a>
+            <a target="_blank" href="https://twitter.com/braveos_ "><img src="assets/twi.png " width="45 " height="45 " alt="twi "></a>
+        </div>
+    </div>
+</nav>
+<nav *ngIf="isAuthenticated" class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand">
+        <img src="assets/room.png" width="35" height="35" class="d-inline-block align-top" alt="logo"> Arcano
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto text-center">
+            <a target="_blank" href="https://www.facebook.com/brandonvelasquez22/" class="mr-2"><img src="assets/face.png" width="45" height="45" alt="face"></a>
+            <a target="_blank" href="https://www.instagram.com/tbtazo_/" class="mr-2"><img src=" assets/insta.png " width="45 " height="45 " alt="insta "></a>
+            <a target="_blank" href="https://twitter.com/braveos_ "><img src="assets/twi.png " width="45 " height="45 " alt="twi "></a>
+            <a class="nav-link ml-3" routerLink="/menu" routerLinkActive="active">Menú</a>
+
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+            <a class="navbar-brand">
+                {{usuario}}
+                <a href=""><img src="assets/logout.png" (click)="logout()" width="35" height="35" class="d-inline-block align-top" alt="logo"></a>
+            </a>
         </div>
     </div>
 </nav>

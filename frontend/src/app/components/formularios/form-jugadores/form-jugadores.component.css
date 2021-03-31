@@ -1,0 +1,103 @@
+.profile-card-6 {
+  max-width: 300px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+  margin-right: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-card-6 img {
+  transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-name {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 255, 255);
+  padding: 15px 20px;
+  background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+  transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-position {
+  position: absolute;
+  color: rgba(1, 229, 245, 0.726);
+  right: 7px;
+  top: 0px;
+  transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-overview {
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+  color: #FFF;
+  padding: 50px 0px 20px 50px;
+  transition: all 0.15s linear;
+}
+
+.profile-card-6 .profile-overview h3 {
+  font-weight: bold;
+  color: rgb(85, 212, 201);
+}
+
+.profile-card-6 .profile-overview p {
+  color: rgba(11, 252, 252, 0.7);
+  font-weight: bold;
+
+}
+
+.profile-card-6:hover img {
+  filter: brightness(100%);
+  filter: grayscale();
+}
+
+.profile-card-6:hover .profile-name {
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.profile-card-6:hover .profile-position {
+  right: 14px;
+}
+
+.profile-card-6:hover .profile-overview {
+  padding-bottom: 25px;
+}
+h1 {
+    margin-bottom: 50px;
+    color: aliceblue
+}
+
+label {
+    color: rgb(255, 255, 255)
+}
+
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px
+}
+
+.help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px
+}
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px
+}

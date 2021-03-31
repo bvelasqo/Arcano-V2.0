@@ -1,0 +1,56 @@
+<div class="col-md-12 row" style="display: flex; justify-content: center;">
+
+  <form [formGroup]="myForm" id="contact-form" role="form">
+    <div class="controls " style="justify-content: center; text-align: center; max-width:800px;">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group"> <label for="form_pregunta">Pregunta</label> <input id="pregunta" type="text"
+              name="pregunta" class="form-control" formControlName="pregunta"
+              placeholder="Por favor ingresa la pregunta" required="required" data-error="La pregunta es requerida">
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group"> <label for="form_op1">Opcion 1</label> <input id="op1" type="text" name="op1"
+              formControlName="op1" class="form-control" placeholder="Por favor ingresa la opción 1" required="required"
+              data-error="La opción 1 es requerida">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group"> <label for="form_op2">Opción 2</label> <input id="op2" type="text" name="op2"
+              formControlName="op2" class="form-control" placeholder="Por favor ingresa la opción 2" required="required"
+              data-error="La opción 2 es requerida">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="form_op3">Opcion 3</label>
+            <input id="op3" type="text" name="op3" formControlName="op3" class="form-control"
+              placeholder="Por favor ingresa la opción 3" required="required" data-error="La opción 3 es requerida">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="form_op4">Opción 4</label> <input id="op4" type="text" name="op4" formControlName="op4"
+              class="form-control" placeholder="Por favor ingresa la opción 4" required="required"
+              data-error="La opción 4 es requerida">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group"> <label for="form_pregunta">Sala</label>
+            <select class="form-control" name="sala" id="sala" formControlName="sala">
+              <option value="" disabled selected>Selecciona la sala</option>
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12 row" style="display: flex; justify-content: center;">
+          <input type="submit" (click)="guardar()" style="background-color: blueviolet; color: cornsilk;"
+            class="ml-4 btn btn-send pt-2 btn-block " value="crear reto">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

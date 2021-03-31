@@ -1,0 +1,132 @@
+<div class="container" style="margin-top: -90px; padding-bottom: 50px; max-width: 950px;">
+  <div class=" text-center mt-5 ">
+    <h1>Ingresa las salas de la partida</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 mx-auto">
+      <div class="card mt-2 mx-auto p-3" style="background-color: rgba(0, 0, 0, 0.459);">
+        <div class="card-body" style="background-color: rgba(0, 0, 0, 0.459);">
+          <div class="container">
+            <form [formGroup]="myForm" id="contact-form" role="form">
+              <div class="controls">
+                <div class="row justify-content-center">
+                  <div class="col-md-6 text-center">
+                    <div class="form-group"> <label style="font-size: 26px;" for="form_name">Jugadores</label> <input
+                        id="sala" type="text" name="sala" class="form-control" formControlName="sala"
+                        placeholder="Por favor ingresar cedula de Jugadores">
+                      <button class="btn mt-2" style="background-color: rgb(43, 214, 226); color: rgb(0, 0, 0);"
+                        [disabled]="!myForm.valid" (click)="agregar()">Agregar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="container" style="">
+                  <div class="row justify-content-center text-align-center" style="display: flex;" >
+                    <div class="row">
+                      <div class="profile-card-6 " style=""><img src="../../../../assets/men.png" class="img img-responsive"
+                          height="220px">
+                        <div class="profile-name">Brandon
+                          <br>Velasquez
+                        </div>
+                        <div class="profile-position">1001243609</div>
+                        <div class="profile-overview">
+                          <div class="profile-overview">
+                            <div class="row text-center">
+                              <div class="col-xs-4">
+                                <h3>1</h3>
+                                <p style="margin-right: 5px;">Número</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h3>0</h3>
+                                <p style="margin-right: 5px;">Intentos</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h3>0</h3>
+                                <p>Puntos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="profile-card-6" style="margin-right: 40px;"><img src="../../../../assets/men.png" class="img img-responsive"
+                          height="220px">
+                        <div class="profile-name">Brandon
+                          <br>Velasquez
+                        </div>
+                        <div class="profile-position">1001243609</div>
+                        <div class="profile-overview">
+                          <div class="profile-overview">
+                            <div class="row text-center">
+                              <div class="col-xs-4">
+                                <h3>1</h3>
+                                <p style="margin-right: 5px;">Número</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h3>0</h3>
+                                <p style="margin-right: 5px;">Intentos</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h3>0</h3>
+                                <p>Puntos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="profile-card-6" style="margin-right: 40px;"><img src="../../../../assets/men.png" class="img img-responsive"
+                          height="220px">
+                        <div class="profile-name">Brandon
+                          <br>Velasquez
+                        </div>
+                        <div class="profile-position">1001243609</div>
+                        <div class="profile-overview">
+                          <div class="profile-overview">
+                            <div class="row text-center">
+                              <div class="col-xs-4">
+                                <h3>1</h3>
+                                <p style="margin-right: 5px;">Número</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h3>0</h3>
+                                <p style="margin-right: 5px;">Intentos</p>
+                              </div>
+                              <div class="col-xs-4">
+                                <h3>0</h3>
+                                <p>Puntos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-12"> <input type="submit" (click)="continuar()"
+                        style="background-color: blueviolet; color: cornsilk;" class="btn btn-send pt-2 btn-block "
+                        value="Guardar y continuar"> </div>
+                    <div class="col-sm mt-3">
+                      <button class="btn btn-block pt-2"
+                        style="color: cornsilk; background-color: rgba(0, 225, 255, 0.233);"
+                        (click)="volver()">Volver</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /.8 -->
+    </div>
+    <!-- /.row-->
+  </div>
+
+</div>
