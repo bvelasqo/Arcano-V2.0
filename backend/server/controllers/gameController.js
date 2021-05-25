@@ -85,3 +85,20 @@ exports.saveRooms = async (req, res, next) => {
 		next(err);
 	}
 };
+
+exports.getRooms = async (req, res, next) => {
+	try {
+        const [allRooms] = await Game.getRooms(req.body.id_partida);
+        console.log(allRooms);
+        res.status(200).json(allRooms);
+    } catch (e) {
+        if (!e.statusCode) {
+            e.statusCode = 500;
+        }
+        next(e);
+    }
+}
+
+exports.savePlayers = async (req, res, next) => {
+	
+}
